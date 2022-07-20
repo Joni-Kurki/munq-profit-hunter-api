@@ -1,0 +1,23 @@
+{
+  "name": "munq-profit-hunter-api",
+  "version": "1.0.0",
+  "description": "munq-profit-app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "author": "MunQ aka Joni Kurki",
+  "license": "Copyrighted",
+  "dependencies": {
+    "atomicassets": "^1.4.2",
+    "atomicmarket": "^1.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "eosjs": "^22.1.0",
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.19"
+  }
+}
