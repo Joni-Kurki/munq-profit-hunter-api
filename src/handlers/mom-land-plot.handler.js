@@ -65,8 +65,7 @@ const checForkBuildings = (asset, buildingName) => {
 }
 
 const handleBuildingFound = (buildingNameInData, buildingNameSearch, value) => {
-	const containsEdition = buildingNameInData.indexOf("-") > -1;
-	const edition = !containsEdition ? "1st" : buildingNameInData.substring(buildingNameInData.indexOf("-") + 1, buildingNameInData.indexOf("-") + 3);
+	const edition = getGeneration(buildingNameInData);
 
 	const lastIndexOfRarityLevel = buildingNameInData.lastIndexOf("_");
 	const buildingRarityAndLevel = buildingNameInData.substring(lastIndexOfRarityLevel + 1);
@@ -91,4 +90,13 @@ const getBuildingRarityAndLevel = (value) => {
 		rarity: rarity,
 		level: Number(level)
 	}
+}
+
+const getGeneration = (buildingNameInData) => {
+	const containsEdition = buildingNameInData.indexOf("-") > -1;
+
+	if(buildingNameInData.includes("-22_")) return "Gen 2";
+	else if(buildingNameInData.includes("-gen3_")) return "Gen 3";
+
+	return !containsEdition ? "Gen 1" : "Unknown";
 }
