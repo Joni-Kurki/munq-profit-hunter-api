@@ -22,5 +22,6 @@ export const MOM_BUILDINGS_DATA_NAMES = [
 	"pirate_radio",
 	"engineering_bay",
 	"concrete_habitat",
-	"teashop"
+	"teashop",
+	"shelter"
 ];
