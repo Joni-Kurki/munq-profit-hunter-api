@@ -1,8 +1,6 @@
 import { MOM_BUILDINGS_DATA_NAMES } from "../common/constants.js";
 
 export const handleLandPlotsSalesData = (salesData) => {
-	console.log(salesData[0]);
-
 	const handledData = salesData.map(sale => {
 
 		return {
