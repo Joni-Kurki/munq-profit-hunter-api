@@ -18,10 +18,10 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
+app.use("/api/mom/", momRouter);
+
 app.get('/', (req, res) => {
 	res.send("app works");
 });
-
-app.use("/api/mom/", momRouter);
 
 app.listen(process.env.PORT || 3001, () => console.log('Up and running... 🚀'));
