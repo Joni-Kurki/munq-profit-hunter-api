@@ -11,6 +11,7 @@ export const handleLandPlotsSalesData = (salesData) => {
 			rarity: sale.assets.length === 1 ? sale.assets[0].data.rarity : null,
 			saleId: Number(sale.sale_id),
 			seller: sale.seller,
+			quad: sale.assets.length === 1 ? sale.assets[0].data.quadrangle : null,
 		}
 	});
 
