@@ -5,7 +5,7 @@ export const getLandPlots = async (req, res) => {
 	try {
 		let plotData = [];
 
-		const numOfPages = 10;
+		const numOfPages = 12;
 
 		for(let page=1; page<numOfPages+1; page++){
 			const salesData = await getSalesData("onmars", "land.plots", page, 100, "desc", 1);
